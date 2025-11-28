@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محرر الأسئلة التفاعلية المطور الشامل</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/docx@7.1.0/build/index.js"></script>
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      .rte-content[data-placeholder]:empty:before {
+        content: attr(data-placeholder);
+        color: #9ca3af;
+        cursor: text;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+          "vite": "https://aistudiocdn.com/vite@^7.2.4",
+          "path": "https://aistudiocdn.com/path@^0.12.7",
+          "url": "https://aistudiocdn.com/url@^0.11.4",
+          "vite-plugin-singlefile": "https://aistudiocdn.com/vite-plugin-singlefile@^2.3.0",
+          "idb": "https://aistudiocdn.com/idb@^8.0.3"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
