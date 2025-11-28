@@ -10,6 +10,8 @@ const __dirname = path.dirname(__filename);
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      // This ensures assets are linked relatively (important for static hosting)
+      base: './', 
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -27,6 +29,7 @@ export default defineConfig(({ mode }) => {
       build: {
         // Ensure assets are inlined regardless of size
         assetsInlineLimit: 100000000,
+        chunkSizeWarningLimit: 1000,
       }
     };
 });
